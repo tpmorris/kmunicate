@@ -7,7 +7,7 @@ Since publication of the paper, many people have said 'I want to do those plots.
 I have written a Stata script (in the [Stata](Stata) directory) that I have adapted to a few people's real examples. A few people have tried – and struggled – in R. A few SAS users have shown interest but think it would be hard. I am interested in Stata, R and SAS implementations because the majority of serious clinical trialists use one of these packages.
 
 # The challenge
-I have launched a challenge [on twitter](https://twitter.com/tmorris_mrc) for people to produce a script or program that implements these. The winning prizes are wooden spoons I carved (see the twitter thread).
+I have launched a challenge [on twitter](https://twitter.com/tmorris_mrc/status/1281330077217824769) for people to produce a script or program that implements these. The winning prizes are wooden spoons I carved (see the twitter thread).
 
 Ok, time for some criteria. Here is what a winner would need to produce:
 * A figure similar to the one below that can be reproduced with data.
