@@ -11,8 +11,7 @@ KM <- survfit(Surv(rectime, censrec) ~ hormon, data = brcancer)
 library(ggfortify)
 KM_data <- fortify(KM)
 # This doesn't include zero, adding it 'by hand'
-KM_data_zero <- data.frame(time = 0, n.risk = as.numeric(table(brcancer$hormon)), n.event = 0, n.censor = 0, surv = 1, std.err = 0, upper = 1, lower = 1, strata = unique(KM_data$strata))
-dplyr::bind_rows(KM_data, KM_data_zero)
+KM_data_zero <- data.frame(time = 0, n.risk = KM$n, n.event = 0, n.censor = 0, surv = 1, std.err = 0, upper = 1, lower = 1, strata = unique(KM_data$strata))
 KM_data <- rbind.data.frame(KM_data, KM_data_zero)
 
 # Define time scale for the x-axis
