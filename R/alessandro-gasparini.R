@@ -3,7 +3,7 @@ library(haven)
 brcancer <- read_dta(file = "http://www.stata-press.com/data/r16/brcancer.dta")
 brcancer$hormon <- factor(brcancer$hormon, levels = 0:1, labels = c("Control", "Research"))
 
-# Fit a KM plot
+# Fit a KM
 library(survival)
 KM <- survfit(Surv(rectime, censrec) ~ hormon, data = brcancer)
 
@@ -31,7 +31,7 @@ plot <- ggplot(KM_data, aes(x = time, y = surv)) +
   theme(legend.position = c(1, 1), legend.justification = c(1, 1), legend.background = element_blank())
 
 # Ticks on the x-axis are every 365 days, so we need to create a summary dataset to create the table with data
-KM_data$table_group <- findInterval(x = KM_data$time, vec = seq(0, 3000, by = 365), left.open = TRUE)
+KM_data$table_group <- findInterval(x = KM_data$time, vec = time_scale, left.open = TRUE)
 # Data-wrangling with dplyr
 library(dplyr)
 table_data <- group_by(KM_data, strata, table_group) %>%
@@ -44,7 +44,7 @@ table_data <- group_by(KM_data, strata, table_group) %>%
 # Add actual time scale
 table_data <- left_join(table_data, data.frame(time_scale, table_group = seq_along(time_scale) - 1), by = "table_group") %>%
   select(-table_group)
-# Reshape long first, then wide...
+# Reshape long first
 library(tidyr)
 table_data <- pivot_longer(data = table_data, cols = c("events", "censor", "at_risk")) %>%
   mutate(name = factor(name, levels = c("at_risk", "censor", "events"), labels = c("At risk", "Censored", "Events")))
@@ -64,5 +64,7 @@ tds <- lapply(seq_along(tds), function(i) {
 # Combine tables using the plot_grid function from {cowplot}
 library(cowplot)
 KM_plot <- plot_grid(plotlist = c(list(plot), tds), align = "hv", axis = "tlbr", ncol = 1, rel_heights = c(3, 1, 1))
+# You might have to adjust the arguments of plot_grid to make it look the way you want
 KM_plot
+# Export plot as a .png
 ggsave(KM_plot, filename = "R/alessandro-gasparini-1.png", dpi = 600, height = 7, width = 7 / sqrt(2))
