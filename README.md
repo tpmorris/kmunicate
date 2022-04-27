@@ -26,6 +26,6 @@ The first winners came in fast:
 1. Ruth Keogh (LSHTM) produced an R script and picked the coffee scoop (pictured centre)
 1. Alessandro Gasparini (Karolinska Institutet) wrote the KMunicate R package (see [the KMunicate repo]()). (He suggested I sell the spoon on Etsy then donate proceeds, but it was so impressive that I sent him the one withtand donated from the next one sold on Etsy.)
 1. Amritendu Bhattacharya (George Institute India) wrote a SAS script and won the [toasted sycamore pocket spoon](https://twitter.com/tmorris_mrc/status/1281540253761908736).
-1. *The final spoon* (the toasted sycamore at the left of the picture) is still available for a Stata command (not script).
+1. The final spoons were awarded to Sarwar Mozumder and Austin Nichols for their Stata scripts.
 
 ![Winner](winner.png?raw=true)
