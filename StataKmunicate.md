@@ -14,4 +14,4 @@ Repository contains Stata code and testing for the `kmunicate` and `risktable` c
 
 To install from github, use
 
-`. net from https://raw.githubusercontent.com/tpmorris/kmunicate/master/`
+```. net from https://raw.githubusercontent.com/tpmorris/kmunicate/Stata/master/```
