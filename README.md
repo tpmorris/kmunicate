@@ -4,12 +4,18 @@ This repository is intended to hold code to produce Kaplan–Meier plots in the 
 
 Since publication of the paper, many people have said 'I want to do those plots. Where is the code? The embarrassing answer is: I did the table as a one-off assuming nobody would like it – *who likes tables!*
 
-I have written a Stata script (in the [Stata](Stata) directory) that I have adapted to a few people's real examples. A few people have tried – and struggled – in R. A few SAS users have shown interest but think it would be hard. I am interested in Stata, R and SAS implementations because the majority of serious clinical trialists use one of these packages.
+I have written a Stata program (in the main directory, for reasons). To install it, use
+
+```
+net from https://raw.githubusercontent.com/tpmorris/kmunicate/master/
+```
 
 # The challenge
+
 I launched a challenge [on twitter](https://twitter.com/tmorris_mrc/status/1281330077217824769) for people to produce a script or program that implements these plots. The winning prizes are wooden spoons I carved (see the twitter thread).
 
 Ok, time for some criteria. Here is what a winner would need to produce:
+
 * A figure similar to the one below that can be reproduced with data.
 * The numbers in the table must align with the time points on the figure.
 * The tables must be structured for each group (e.g. trial arm) with a row for 'at-risk', 'censored' and 'events' (see example below).
@@ -22,10 +28,12 @@ Ok, time for some criteria. Here is what a winner would need to produce:
 The fastest person gets to choose their spoon and second and third choose from the remainder (you don't have to take one). The competition will close on 1st September 2020 because beyond then I might forget and sell them on Etsy.
 
 # Winners
+
 The first winners came in fast:
+
 1. Ruth Keogh (LSHTM) produced an R script and picked the coffee scoop (pictured centre)
-1. Alessandro Gasparini (Karolinska Institutet) wrote the KMunicate R package (see [the KMunicate repo]()). (He suggested I sell the spoon on Etsy then donate proceeds, but it was so impressive that I sent him the one withtand donated from the next one sold on Etsy.)
-1. Amritendu Bhattacharya (George Institute India) wrote a SAS script and won the [toasted sycamore pocket spoon](https://twitter.com/tmorris_mrc/status/1281540253761908736).
-1. The final spoons were awarded to Sarwar Mozumder and Austin Nichols for their Stata scripts.
+2. Alessandro Gasparini (Karolinska Institutet) wrote the KMunicate R package (see [the KMunicate repo]()). (He suggested I sell the spoon on Etsy then donate proceeds, but it was so impressive that I sent him the one withtand donated from the next one sold on Etsy.)
+3. Amritendu Bhattacharya (George Institute India) wrote a SAS script and won the [toasted sycamore pocket spoon](https://twitter.com/tmorris_mrc/status/1281540253761908736).
+4. The final spoons were awarded to Sarwar Mozumder and Austin Nichols for their Stata scripts.
 
 ![Winner](winner.png?raw=true)

@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 0.3  10nov2023}{...}
+{* *! version 1.0  16jan2025}{...}
 {vieweralsosee "risktable" "help risktable"}{...}
 {vieweralsosee "[ST] sts graph" "help sts graph"}{...}
 {viewerjumpto "Syntax" "smcl##syntax"}{...}
