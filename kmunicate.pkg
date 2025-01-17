@@ -9,10 +9,10 @@ d kmunicate version 1.0
 d risktable version 1.0
 d Distribution-Date: 16jan2025
 
+d kmunicate: a graph command that adds extended risk-tables to sts graph
+d risktable: a sidekick to kmunicate that creates and displays the risk-tables (and optionally saves as a dataset)
+
 f kmunicate.ado
 f kmunicate.sthlp
 f risktable.ado
 f risktable.sthlp
-
-p kmunicate: a graph command that adds extended risk-tables to sts graph
-p risktable: a sidekick to kmunicate that creates and displays the risk-tables (and optionally saves as a dataset)
