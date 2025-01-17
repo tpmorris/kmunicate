@@ -3,8 +3,7 @@ v 3
 d KMunicate-style tables for Kaplan–Meier graphs
 d 
 d Tim P. Morris, Patrick Royston, Ian R. White (MRC Clinical Trials Unit at UCL)
-d For background, see https://bmjopen.bmj.com/content/9/9/e030215
-d 'Proposals on Kaplan–Meier plots in medical research and a survey of stakeholder views: KMunicate'
+d For background, see {browse "https://bmjopen.bmj.com/content/9/9/e030215": Proposals on Kaplan–Meier plots in medical research and a survey of stakeholder views: KMunicate
 
 p kmunicate: a graph command that adds extended risk-tables to sts graph
-p risktable: a helper for kmunicate that creates and displays the risk-tables (and optionally saves as a dataset)
+p risktable: a sidekick to kmunicate that creates and displays the risk-tables (and optionally saves as a dataset)

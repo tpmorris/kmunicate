@@ -13,14 +13,14 @@
 {marker syntax}{...}
 {title:Syntax}
 
-{p 8 21 2}{cmd:risktable} {it:times} {ifin}
+{phang}{cmd:risktable} {it:times} {ifin}
 [{cmd:,} {opth by(varlist)} {opt xtit:le(axis_title)} {opt save:data(filename, replace)} {opt noli:st}]
 
 {marker times}{...}
 {phang}
 where {it:times} is a {it:{help numlist}} with smallest element ≥0 and largest element ≤ the final follow-up time.
 
-{synoptset 30 tabbed}{...}
+{synoptset 29 tabbed}{...}
 {synopthdr}
 {synoptline}
 {synopt :{opth by(varlist)}}compute summary numbers for each group formed by {it:varlist}{p_end}
@@ -32,9 +32,12 @@ where {it:times} is a {it:{help numlist}} with smallest element ≥0 and largest
 
 {marker description}{...}
 {title:Description}
-{phang}
-{cmd:risktable} is a worked for {help kmunicate}. It calculates the numbers for extended ‘kmunicate’ style risktables beneath Kaplan–Meier graphs and returns them as s(kmulabs), as the global F9 and, optionally, as a (transposed) dataset.
-{p_end}
+{pstd} {cmd:risktable} is a helper for {help kmunicate} but can be used alone. It
+calculates the numbers for extended ‘kmunicate’ style risktables beneath Kaplan–Meier
+graphs and returns them in {bf:s(kmulabs)} and, optionally, as a (transposed) dataset.
+
+{pstd} Note that you must {cmd:stset} your data before using {cmd:risktable}; see
+{manhelp stset ST}.
 
 
 {title:Examples}
@@ -51,7 +54,7 @@ where {it:times} is a {it:{help numlist}} with smallest element ≥0 and largest
 {title:Stored results}
 
 {pstd}{cmd:risktable} stores only {bf:s(kmulabs)}, the labels that are used by {help kmunicate}. To look at them, type:{p_end}
-{pstd}. display `"`s(kmulabs)'"'
+{pstd}. {stata display `"`s(kmulabs)'"'}
 
 
 {title:References}
@@ -68,6 +71,7 @@ B. Choodari-Oskooei, M. R. Sydes.
 
 {phang}Patrick Royston, MRC Clinical Trials Unit at UCL{p_end}
 {phang}Email: {browse "mailto:j.royston@ucl.ac.uk":j.royston@ucl.ac.uk}{p_end}
+
 
 {title:Acknowledgements}
 {phang}Matt R. Sydes (MRC Clinical Trials Unit at UCL){p_end}

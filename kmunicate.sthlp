@@ -26,17 +26,14 @@
 {synopt :{it:sts graph options}}Options of sts graph.{p_end}
 {synoptline}
 
-{marker timepoints}{...}
-{phang}
-where the {it:{help numlist}} specified in the non-optional {it:timepoints} must
-have smallest value ≥0 and largest value ≤final follow-up time.
-
 
 {marker description}{...}
 {title:Description}
-{phang}
-{cmd:kmunicate} is a wrapper for {help sts graph} that implements ‘KMunicate’ style extended risktables.
-{p_end}
+
+{pstd}{cmd:kmunicate} is a wrapper for {help sts graph} that implements ‘KMunicate’ style extended risktables.
+
+{pstd}Note that you must {cmd:stset} your data before using {cmd:kmunicate}; see
+{manhelp stset ST}.
 
 
 {title:Examples}
