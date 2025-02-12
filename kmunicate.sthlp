@@ -33,7 +33,7 @@
 {pstd}{cmd:kmunicate} is a wrapper for {help sts graph} that implements ‘KMunicate’ style extended risktables.
 
 {pstd}Note that you must {cmd:stset} your data before using {cmd:kmunicate}; see
-{manhelp stset ST}.
+{manhelp stset ST}. Note also that {cmd:kmunicate} does not currently work with multi-row data (for example after {cmd:stsplit}) in which a single individual has several rows.
 
 
 {title:Examples}

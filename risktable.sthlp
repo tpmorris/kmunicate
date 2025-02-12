@@ -37,7 +37,7 @@ calculates the numbers for extended ‘kmunicate’ style risktables beneath Kap
 graphs and returns them in {bf:s(kmulabs)} and, optionally, as a (transposed) dataset.
 
 {pstd} Note that you must {cmd:stset} your data before using {cmd:risktable}; see
-{manhelp stset ST}.
+{manhelp stset ST}. Note also that {cmd:risktable} does not currently work with multi-row data (for example after {cmd:stsplit}) in which a single individual has several rows.
 
 
 {title:Examples}
