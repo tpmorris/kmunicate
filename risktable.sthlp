@@ -74,9 +74,10 @@ B. Choodari-Oskooei, M. R. Sydes.
 
 
 {title:Acknowledgements}
-{phang}Matt R. Sydes (MRC Clinical Trials Unit at UCL){p_end}
+{phang}Matt R. Sydes (NHS England){p_end}
 {phang}Ian R. White (MRC Clinical Trials Unit at UCL){p_end}
 {phang}David J. Fisher (MRC Clinical Trials Unit at UCL){p_end}
+{phang}Myra McGuinness (University of Melbourne){p_end}
 
 
 {title:Also see}

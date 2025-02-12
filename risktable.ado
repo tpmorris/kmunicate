@@ -1,4 +1,4 @@
-*! 1.0 | 2025-01-16 | Tim P. Morris, Patrick Royston, Ian R. White
+*! 1.1 | 2025-02-12 | Tim P. Morris, Patrick Royston, Ian R. White
 *  For history, see end of file
 
 program define risktable, sortpreserve sclass
@@ -34,6 +34,10 @@ program define risktable, sortpreserve sclass
     tempvar grp
     tempname tmpfrm
 
+*   Record current frame name to revert to (don't assume default)
+    frame pwf
+    local orig_frame = r(currentframe)
+
 *   Parse `"savedata"' option at comma into locals named `replace' and `savefile'
     tokenize `"`savedata'"', parse(",")
     local replace = "`2' `3'"
@@ -66,14 +70,14 @@ program define risktable, sortpreserve sclass
 	local value_label : value label `grp'
 	if !missing("`value_label'") {
 		forvalues g = 1/`ngrp'{
-			local value_label`g' : label `value_label' `group`g''
+			local value_label`g' : label `value_label' `g'
 		}
         local max_lab_len : label `value_label' maxlength
 	}
 	else {
 		local max_lab_len 0
 		forvalues g = 1/`ngrp'{
-			local value_label`g' `group`g''
+			local value_label`g' `g'
 			local lgi = length("`group`g''")
 			if `lgi' > `max_lab_len' local max_lab_len = `lgi'
 		}
@@ -134,17 +138,20 @@ program define risktable, sortpreserve sclass
         quietly compress
         noisily save `"`savefile'"' `replace'
     }
-    frame change default
+    frame change `orig_frame'
 
     c_local kmulabs `"`kmulab'"'
     sreturn local kmulabs `"`kmulab'"'
 end
 
 * History:
+* 2025-02-12 1.1  TPM Bugs fixed (with thanks to Myra McGuinness)
+*                 - After posting, revert to original frame not default
+*                 - Ensure 
 * 2025-01-16 1.0  TPM set to version 1.0 for release
 * 2023-11-16 0.31 IRW fixed error in calculation of table numbers
 * 2023-11-10 0.3  TPM added functionality to return the required xlab as a string
-*                 (with grateful acknowledgement to David J. Fisher)
+*                 (with thanks to David J. Fisher)
 * 2023-10-23 0.2  TPM rewrote (using code from PR version) after discussion on 
 *                 program design with PR, Ian R. White and Matt R. Sydes
 * 2023-01-16 0.1  PR initialised risktable

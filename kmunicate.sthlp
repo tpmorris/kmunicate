@@ -84,6 +84,7 @@ views. {it:BMJ Open}. 2019; 9(9):e030215.
 {phang}Ian R. White (MRC Clinical Trials Unit at UCL){p_end}
 {phang}David J. Fisher (MRC Clinical Trials Unit at UCL){p_end}
 {phang}Nicholas J. Cox (Durham University){p_end}
+{phang}Myra McGuinness (University of Melbourne){p_end}
 
 
 {title:Also see}
