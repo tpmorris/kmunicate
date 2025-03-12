@@ -48,7 +48,7 @@
 {phang}.
 {stata kmunicate, by(drug) timepoints(0(10)40) ci}
 
-{pstd}Using options of {cmd:sts graph} to improve the plot. Note: uses Stata 18 colors (stc1, stc2, stc3).{p_end}
+{pstd}This graph could be improved in various ways, using options available in {cmd:sts graph}. In the following example, the scale is reduced to give more space to the plotregion, the legend is improved, and colors are specified (note: uses Stata 18 colors stc1, stc2 and stc3). Note: example uses Stata 18 colors (stc1, stc2, stc3).{p_end}
 {phang}.
 {stata kmunicate, by(drug) time(0(10)40) ci ci1(fc(stc1%40)) plot1(lc(stc1)) ci2(fc(stc2%40)) plot2(lc(stc2)) ci3(fc(stc3%40)) plot3(lc(stc3)) legend(order(7 "Placebo" 8 "Other" 9 "NA") cols(1) pos(7) ring(0)) scale(0.8) ysize(6)}
 
